@@ -76,18 +76,17 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+          <Section title="Application domotique">
+            Vous pouvez <Text style={styles.highlight}>gérer votre maison</Text> depuis l'appli.
           </Section>
-          <Section title="See Your Changes">
+          <Section title="Capteurs">
             <ReloadInstructions />
           </Section>
-          <Section title="Debug">
+          <Section title="Actionneurs">
             <DebugInstructions />
           </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
+          <Section title="Autonome">
+            Vous pouvez automatiser des actions:
           </Section>
           <LearnMoreLinks />
         </View>
