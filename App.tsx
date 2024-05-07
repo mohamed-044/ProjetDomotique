@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Accueil from './Accueil';
@@ -7,37 +7,28 @@ import Historique from './Historique';
 import GestionAppareils from './GestionAppareils'; // Assurez-vous d'importer le composant
 import Tabs from './navigation/tabs';
 import axios from 'axios';
-import { Text } from 'react-native';
+import { Alert } from 'react-native';
 
 const Stack = createStackNavigator();
 
 const App = () => {
-  const [message, setMessage] = useState('');
-
   useEffect(() => {
-const sendMessage = async () => {
-  try {
-    const message = 'Le capteur est allumé';
-    const response = await fetch('http://192.168.0.20:3008/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'text/plain'
-      },
-      body: message
-    });
-    const data = await response.text();
-    console.log('Response from server:', data);
-  } catch (error) {
-    console.error('Error:', error.message);
-  }
-};
+    const sendMessage = async () => {
+      try {
+        const response = await axios.post('http://192.168.0.20:3011/action', "Mikail");
+        console.log('Response from server:', response.data);
+        Alert.alert('Server Response', response.data);
+      } catch (error) {
+        console.error('Error:', error.message);
+        Alert.alert('Error', error.message);
+      }
+    };
     sendMessage();
   }, []);
 
   return (
     <NavigationContainer>
         <Tabs />
-        <Text>{message}</Text>
     </NavigationContainer>
   );
 };
