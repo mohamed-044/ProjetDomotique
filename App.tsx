@@ -8,6 +8,7 @@ import GestionAppareils from './GestionAppareils'; // Assurez-vous d'importer le
 import Tabs from './navigation/tabs';
 import axios from 'axios';
 import { Alert } from 'react-native';
+import { FlatList } from 'react-native';
 
 const Stack = createStackNavigator();
 
