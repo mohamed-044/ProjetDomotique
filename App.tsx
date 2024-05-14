@@ -15,7 +15,7 @@ const App = () => {
   useEffect(() => {
     const sendMessage = async () => {
       try {
-        const response = await axios.post('http://192.168.0.20:3011/action', "Mikail");
+        const response = await axios.post('http://192.168.0.20:3006/action', "Le capteur est allumé");
         console.log('Response from server:', response.data);
         Alert.alert('Server Response', response.data);
       } catch (error) {
