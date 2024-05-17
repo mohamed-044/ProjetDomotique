@@ -1,41 +1,28 @@
 import React from 'react';
-import { View, Button, Image } from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
 
-const Accueil = ({ navigation }) => {
-  const handleNavigationToChoixCapteurs = () => {
-    navigation.navigate('ChoixCapteurs');
-  };
-
-  const handleNavigationToHistorique = () => {
-    navigation.navigate('Historique');
-  };
-
-  const handleNavigationToGestionAppareils = () => {
-    navigation.navigate('GestionAppareils');
-  };
-
+const Accueil = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      {/* Utilisation de l'élément Image pour afficher votre logo */}
+    <View style={styles.container}>
       <Image
         source={require('./assets/logo.png')}
-        style={{ width: 200, height: 200 }} // ajustez la largeur et la hauteur selon vos besoins
-        resizeMode="contain" // ajustez le mode de redimensionnement selon vos besoins
-      />
-      <Button
-        title="Choix des capteurs"
-        onPress={handleNavigationToChoixCapteurs}
-      />
-      <Button
-        title="Historique"
-        onPress={handleNavigationToHistorique}
-      />
-      <Button
-        title="Gestion des appareils"
-        onPress={handleNavigationToGestionAppareils}
+        style={styles.logo}
       />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  logo: {
+    width: 200,
+    height: 200,
+    resizeMode: 'contain',
+  },
+});
 
 export default Accueil;

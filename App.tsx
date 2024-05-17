@@ -1,16 +1,10 @@
+// App.js
 import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import Accueil from './Accueil';
-import ChoixCapteurs from './ChoixCapteurs';
-import Historique from './Historique';
-import GestionAppareils from './GestionAppareils'; // Assurez-vous d'importer le composant
-import Tabs from './navigation/tabs';
 import axios from 'axios';
 import { Alert } from 'react-native';
-import { FlatList } from 'react-native';
-
-const Stack = createStackNavigator();
+import DrawerNavigator from './drawer';
+import Tabs from './navigation/Tabs';
 
 const App = () => {
   useEffect(() => {
@@ -29,7 +23,7 @@ const App = () => {
 
   return (
     <NavigationContainer>
-        <Tabs />
+      <DrawerNavigator />
     </NavigationContainer>
   );
 };

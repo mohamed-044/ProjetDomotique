@@ -34,7 +34,7 @@ const Tabs = () => {
         tabBarIcon: ({ focused }) => (
           <View style={{ alignItems: 'center', justifyContent: 'center', top: 10 }}>
             <Image
-              source={require('../assets/home.png')}
+              source={focused ? require('../assets/home-focused.png') : require('../assets/home.png')}
               resizeMode='contain'
               style={{
                 width: 25,
@@ -52,7 +52,7 @@ const Tabs = () => {
         tabBarIcon: ({ focused }) => (
           <View style={{ alignItems: 'center', justifyContent: 'center', top: 10 }}>
             <Image
-              source={require('../assets/capteurs.png')}
+              source={focused ? require('../assets/capteurs-focused.png') : require('../assets/capteurs.png')}
               resizeMode='contain'
               style={{
                 width: 25,
@@ -70,7 +70,7 @@ const Tabs = () => {
         tabBarIcon: ({ focused }) => (
           <View style={{ alignItems: 'center', justifyContent: 'center', top: 10 }}>
             <Image
-              source={require('../assets/history.png')}
+              source={focused ? require('../assets/history-focused.png') : require('../assets/history.png')}
               resizeMode='contain'
               style={{
                 width: 25,
@@ -88,7 +88,7 @@ const Tabs = () => {
         tabBarIcon: ({ focused }) => (
           <View style={{ alignItems: 'center', justifyContent: 'center', top: 10 }}>
             <Image
-              source={require('../assets/devices.png')}
+              source={focused ? require('../assets/devices-focused.png') : require('../assets/devices.png')}
               resizeMode='contain'
               style={{
                 width: 25,
