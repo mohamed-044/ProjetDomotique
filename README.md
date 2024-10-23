@@ -1,79 +1,99 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Box Domotique
+## Description
+### Box Domotique est un projet de gestion et de contrôle d'appareils connectés au sein d'une maison intelligente. Développé en React Native avec une architecture API REST en backend, cette application permet de superviser et de contrôler différents capteurs et appareils à distance, directement depuis une interface mobile.
 
-# Getting Started
+### L'objectif est de centraliser le contrôle des appareils domotiques, de visualiser les données en temps réel (température, luminosité, etc.), d'activer ou de désactiver certains capteurs, et de gérer des scénarios d'automatisation pour optimiser le confort et l'efficacité énergétique.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Fonctionnalités principales
+## Visualisation des capteurs :
 
-## Step 1: Start the Metro Server
+### Affichage en temps réel des données collectées par les capteurs (ex : température, humidité).
+### Possibilité de changer l'état des capteurs (activer/désactiver).
+## Gestion des appareils :
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### Liste des appareils connectés avec options de gestion individuelle.
+### Activation/désactivation d'appareils depuis l'application mobile.
+## Scénarios automatisés :
 
-```bash
-# using npm
-npm start
+### Création de scénarios pour automatiser certaines actions en fonction des conditions détectées par les capteurs.
+### Historique des événements :
 
-# OR using Yarn
-yarn start
-```
+### Suivi des actions et modifications d'état des capteurs dans un historique détaillé.
+## Captures d'écran
 
-## Step 2: Start your Application
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## Technologies utilisées
+## Frontend :
 
-### For Android
+### React Native
+### Axios pour les requêtes HTTP
+### Navigation avec React Navigation
+## Backend :
 
-```bash
-# using npm
-npm run android
+### Node.js avec Express
+### Base de données (ajustez en fonction de votre choix, ex: MongoDB, MySQL)
+## Autres :
 
-# OR using Yarn
-yarn android
-```
+### API RESTful pour les échanges de données
+### Gestion asynchrone des requêtes avec Promises (then, catch) et async/await
+###  Installation et Configuration
+### Prérequis
+### Avant de commencer, assurez-vous d'avoir installé :
 
-### For iOS
+### Node.js (version recommandée : 14.x ou plus récente)
+### NPM (ou Yarn) pour la gestion des dépendances
+### Un simulateur ou un appareil Android/iOS pour tester l'application
+## Instructions
+## Clonez le dépôt GitHub :
 
-```bash
-# using npm
-npm run ios
+### bash
+### Copier le code
+### git clone https://github.com/votre-compte/github-projet-domotique.git
+### cd github-projet-domotique
+## Installez les dépendances nécessaires :
 
-# OR using Yarn
-yarn ios
-```
+### bash
+### Copier le code
+### npm install
+## Lancez le serveur backend :
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+### bash
+### Copier le code
+### node server.js
+## Lancez l'application mobile :
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### bash
+### Copier le code
+### npx react-native run-android # ou run-ios pour iOS
+### Configuration
+### Vous devez configurer l'URL du serveur backend dans le code pour qu'il pointe vers l'adresse de votre serveur (par défaut http://192.168.0.05:3000 dans l'application).
 
-## Step 3: Modifying your App
+## Utilisation
+### Lancer l'application sur un émulateur ou appareil réel.
+### Accédez à l'écran d'accueil où vous pouvez choisir d'afficher les capteurs, l'historique ou gérer les appareils.
+### Utilisez les différents écrans pour interagir avec vos capteurs et appareils connectés.
+### Structure du projet
+## Voici un aperçu rapide de l'architecture du projet :
 
-Now that you have successfully run the app, let's modify it.
+### bash
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+### /assets                  # Contient les images et ressources utilisées dans l'application
+### /components              # Composants réutilisables de l'application
+### /screens                 # Différentes pages/écrans de l'application
+###   Accueil.js             # Page d'accueil avec le logo et accès aux fonctionnalités
+###  ChoixCapteurs.js       # Page de gestion des capteurs
+###  GestionAppareils.js    # Page de gestion des appareils connectés
+###  Historique.js          # Page pour consulter l'historique des événements
+###  Scenario.js            # Page de gestion des scénarios d'automatisation
+### server.js                # Fichier backend pour gérer les requêtes et interagir avec la base de données
+## Améliorations futures
+### Ajouter des notifications push pour alerter des événements importants (par exemple, si un capteur dépasse un seuil critique).
+### Intégration avec des assistants vocaux comme Google Assistant ou Alexa pour des commandes vocales.
+### Amélioration de l'interface utilisateur avec un design plus intuitif et des animations.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## Auteur
+### Ce projet a été développé par Mohamed Boulatika, dans le cadre de mon BTS SNIR.
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Licence
+### Ce projet est sous licence MIT.
