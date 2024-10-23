@@ -52,7 +52,7 @@
 
 ### bash
 ### Copier le code
-### git clone git@github.com:mohamed-044/ProjetDomotique.git
+### git clone https://github.com/mohamed-044/ProjetDomotique.git
 ### cd github-projet-domotique
 ## Installez les dépendances nécessaires :
 
