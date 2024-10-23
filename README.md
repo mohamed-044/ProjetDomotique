@@ -22,6 +22,9 @@
 ### Suivi des actions et modifications d'état des capteurs dans un historique détaillé.
 ## Captures d'écran
 
+![Page Gestion Appareils Application mobile](https://github.com/user-attachments/assets/e4b7a58e-9791-4375-a888-455a312766f4)
+
+![Page Historique Application mobile](https://github.com/user-attachments/assets/d0945704-b0cf-4c2d-9265-641389c72535)
 
 ## Technologies utilisées
 ## Frontend :
@@ -49,7 +52,7 @@
 
 ### bash
 ### Copier le code
-### git clone https://github.com/votre-compte/github-projet-domotique.git
+### git clone git@github.com:mohamed-044/ProjetDomotique.git
 ### cd github-projet-domotique
 ## Installez les dépendances nécessaires :
 
